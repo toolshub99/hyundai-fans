@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Hyundai SUVs - Palisade, Santa Fe, Kona & More | HyundaiFans</title>
+  <meta name="title" content="Hyundai SUVs - Palisade, Santa Fe, Kona & More">
+  <meta name="description" content="Explore Hyundai's full SUV lineup including the Palisade, Santa Fe, Tucson, and Kona. Compare models, features, and find the perfect Hyundai SUV for your needs.">
+  <meta name="keywords" content="Hyundai SUVs, Hyundai Palisade, Hyundai Santa Fe, Hyundai Tucson, Hyundai Kona, Hyundai SUVs for sale">
+  <meta name="author" content="HyundaiFans">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hyundaifans.com/suvs">
+  <meta property="og:title" content="Hyundai SUVs - Palisade, Santa Fe, Kona & More">
+  <meta property="og:description" content="Explore Hyundai's full SUV lineup including the Palisade, Santa Fe, Tucson, and Kona.">
+  <meta property="og:image" content="https://hyundaifans.com/images/hyundai-suvs-social-preview.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://hyundaifans.com/suvs">
+  <meta property="twitter:title" content="Hyundai SUVs - Palisade, Santa Fe, Kona & More">
+  <meta property="twitter:description" content="Explore Hyundai's full SUV lineup including the Palisade, Santa Fe, Tucson, and Kona.">
+  <meta property="twitter:image" content="https://hyundaifans.com/images/hyundai-suvs-social-preview.jpg">
+  
+  <!-- Favicon & Icons -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/logo.png">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f4f5f7;
+      color: rgb(14, 1, 87);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #003366;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin-left: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #a8d0ff;
+    }
+
+    .nav-links a.active {
+      color: #a8d0ff;
+      font-weight: 600;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.9)), url('https://www.hyundai.com/content/dam/hyundai/ww/en/images/suvs/all-new-santa-fe/highlights/highlights-pc-01.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Filter Section */
+    .filter-section {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+    }
+
+    .filter-title {
+      margin-bottom: 15px;
+      color: #003366;
+    }
+
+    .filter-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .filter-btn {
+      background: #f0f4f8;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: 500;
+    }
+
+    .filter-btn:hover {
+      background: #e1e8f0;
+    }
+
+    .filter-btn.active {
+      background: #003366;
+      color: white;
+    }
+
+    /* Model Grid */
+    .model-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      color: #003366;
+    }
+
+    .card-content p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 15px;
+      min-height: 60px;
+    }
+
+    .card-content a {
+      text-decoration: none;
+      background: #003366;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-size: 14px;
+      display: inline-block;
+      transition: background 0.3s;
+      font-weight: 500;
+    }
+
+    .card-content a:hover {
+      background: #1E4072;
+    }
+
+    .model-year {
+      display: inline-block;
+      background: #e6f2ff;
+      color: #003366;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #002856;
+      color: white;
+      padding: 50px 0 20px;
+      margin-top: 80px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 30px;
+    }
+
+    .footer-column h3 {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .top-nav {
+        flex-direction: column;
+        padding: 15px 0;
+      }
+
+      .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .nav-links li {
+        margin: 5px 10px;
+      }
+      
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+    
+    .no-results {
+      text-align: center;
+      padding: 40px;
+      color: #666;
+      font-size: 18px;
+      grid-column: 1 / -1;
+    }
+  </style>
+</head>
+<body>
+   <header>
+        <div class="container">
+            <div class="top-nav">
+                <div class="logo">HyundaiFans</div>
+                <ul class="nav-links">
+                    <li><a href="Hyundai-Models-SUVs-Electric-Hatchbacks-Sedans.html">Home</a></li>
+                    <li><a href="Hyundai-SUVs.html">SUVs</a></li>
+                    <li><a href="Hyundai-Sedans.html">Sedans</a></li>
+                    <li><a href="Hyundai-Electric.html">Electric</a></li>
+                    <li><a href="Hyundai-Hatchbacks.html">Hatchbacks</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+  <section class="hero">
+    <div class="container">
+      <h1>Hyundai SUV Models</h1>
+      <p>Discover Hyundai's complete lineup of SUVs, from the compact Kona to the spacious three-row Palisade. Find the perfect SUV for your lifestyle.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="filter-section">
+      <h2 class="filter-title">Filter by Year</h2>
+      <div class="filter-options">
+        <button class="filter-btn active" data-filter="all">All Years</button>
+        <button class="filter-btn" data-filter="2025">2025</button>
+        <button class="filter-btn" data-filter="2024">2024</button>
+        <button class="filter-btn" data-filter="2023">2023</button>
+        <button class="filter-btn" data-filter="2022">2022</button>
+      </div>
+    </div>
+
+    <div id="suv-content"></div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Vehicle Categories</h3>
+          <ul class="footer-links">
+            <li><a href="category.html?type=suv">SUVs & Crossovers</a></li>
+            <li><a href="category.html?type=sedan">Sedans</a></li>
+            <li><a href="electric.html">Electric Vehicles</a></li>
+            <li><a href="hatchback.html">Hatchbacks</a></li>
+            <li><a href="performance.html">Performance Models</a></li>
+            <li><a href="hybrid.html">Hybrid & PHEV</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Popular Models</h3>
+          <ul class="footer-links">
+            <li><a href="2025-hyundai-palisade-specifications.html">Palisade</a></li>
+            <li><a href="2025-hyundai-santa-fe.html">Santa Fe</a></li>
+            <li><a href="hyundai-ioniq5.html">IONIQ 5</a></li>
+            <li><a href="hyundai-ioniq6.html">IONIQ 6</a></li>
+            <li><a href="hyundai-kona-comparison.html">Kona</a></li>
+            <li><a href="2017-hyundai-sonata.html">Sonata</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul class="footer-links">
+            <li><a href="#">Specifications Guide</a></li>
+            <li><a href="#">Comparison Tools</a></li>
+            <li><a href="#">Owner Reviews</a></li>
+            <li><a href="#">Maintenance Guides</a></li>
+            <li><a href="#">Financing Calculator</a></li>
+            <li><a href="#">Find a Dealer</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>About HyundaiFans</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Condition</a></li>
+            <li><a href="#">Site Map</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        © 2025 HyundaiFans | This is an independent fan site not affiliated with Hyundai Motor Company. All specifications are based on manufacturer data and subject to change.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Hyundai SUV models data
+    const suvModels = [
+      {
+        name: "Hyundai Palisade",
+        year: "2025",
+        category: "suv",
+        img: "https://media.drive.com.au/obj/tx_q:70,rs:auto:960:540:1/driveau/upload/cms/uploads/uh0rxraxyi75hb3ioqtx",
+        desc: "Luxury family SUV with advanced safety features and a premium interior.",
+        link: "2025-Hyundai-Palisade-Specifications.html"
+      },
+      {
+        name: "Hyundai Kona",
+        year: "2024",
+        category: "suv",
+        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/2024_Hyundai_Kona_SEL%2C_front_right%2C_05-06-2024.jpg/640px-2024_Hyundai_Kona_SEL%2C_front_right%2C_05-06-2024.jpg",
+        desc: "Compact SUV with a modern design and smart connectivity.",
+        link: "2024-Hyundai-Kona-SEL.html"
+      },
+      {
+        name: "Hyundai Santa Fe",
+        year: "2023",
+        category: "suv",
+        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/0_Hyundai_Santa_Fe_%28TM%29_2.jpg/960px-0_Hyundai_Santa_Fe_%28TM%29_2.jpg?20230624134436",
+        desc: "Spacious and efficient SUV perfect for family adventures.",
+        link: "2023-hyundai-santa-fe.html"
+      },
+      {
+        name: "Hyundai Santa Fe",
+        year: "2024",
+        category: "suv",
+        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/0_Hyundai_Santa_Fe_%28TM%29_2.jpg/960px-0_Hyundai_Santa_Fe_%28TM%29_2.jpg?20230624134436",
+        desc: "Latest Santa Fe with enhanced features and technology.",
+        link: "2024 Hyundai Santa Fe.html"
+      },
+      {
+        name: "Hyundai Santa Fe",
+        year: "2025",
+        category: "suv",
+        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Hyundai_Santa_Fe%2C_Auto_2024%2C_Zurich_%28PANA1001%29.jpg/960px-Hyundai_Santa_Fe%2C_Auto_2024%2C_Zurich_%28PANA1001%29.jpg?20241109064744",
+        desc: "Next-generation Santa Fe with bold design and advanced tech.",
+        link: "2025-Hyundai-Santa-Fe.html"
+      },
+      {
+        name: "Hyundai Palisade",
+        year: "2022",
+        category: "suv",
+        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Hyundai_Palisade_2.2D_Calligraphy_LX2_FL_Abyss_Black_Pearl_%2810%29.jpg/960px-Hyundai_Palisade_2.2D_Calligraphy_LX2_FL_Abyss_Black_Pearl_%2810%29.jpg?20220601104032",
+        desc: "Three-row SUV with premium features and family-friendly design.",
+        link: "2022-Hyundai-Palisade-Review-Features-&-Awards.html"
+      },
+      {
+        name: "Hyundai Palisade Calligraphy",
+        year: "2023",
+        category: "suv",
+        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Hyundai_Palisade_2.2D_Calligraphy_LX2_FL_Abyss_Black_Pearl_%2810%29.jpg/960px-Hyundai_Palisade_2.2D_Calligraphy_LX2_FL_Abyss_Black_Pearl_%2810%29.jpg?20220601104032",
+        desc: "Top-tier Palisade with luxury Calligraphy trim.",
+        link: "2022-2023-Hyundai-Palisade-Calligraphy.html"
+      },
+      {
+        name: "Hyundai Santa Fe Awards",
+        year: "2024",
+        category: "suv",
+        img: "images/santa-fe.jpg",
+        desc: "Award-winning Santa Fe with reliability and features.",
+        link: "2024-Hyundai-santa-Fe-Awards-Reliability-&-For-Sale-Information.html"
+      },
+      {
+        name: "Hyundai Kona Comparison",
+        year: "2024",
+        category: "suv",
+        img: "images/kona.jpg",
+        desc: "Compare Kona models and features.",
+        link: "Hyundai-Kona-Comparison.html"
+      },
+      {
+        name: "Hyundai Tucson",
+        year: "2024",
+        category: "suv",
+        img: "images/tucson.jpg",
+        desc: "Modern compact SUV with innovative design and technology.",
+        link: "hyundai-tucson.html"
+      },
+      {
+        name: "Hyundai Venue",
+        year: "2024",
+        category: "suv",
+        img: "images/venue.jpg",
+        desc: "Compact crossover with impressive features and value.",
+        link: "hyundai-venue.html"
+      }
+    ];
+
+    // Function to render SUV models
+    function renderSUVModels(filterYear = 'all') {
+      const container = document.getElementById("suv-content");
+      
+      // Filter models based on selected year
+      const filteredModels = filterYear === 'all' 
+        ? suvModels 
+        : suvModels.filter(model => model.year === filterYear);
+      
+      if (filteredModels.length === 0) {
+        container.innerHTML = '<div class="no-results">No SUV models found for the selected year.</div>';
+        return;
+      }
+      
+      // Generate HTML for filtered models
+      container.innerHTML = `
+        <div class="model-list">
+          ${filteredModels.map(model => `
+            <div class="card">
+              <img src="${model.img}" alt="${model.name}">
+              <div class="card-content">
+                <span class="model-year">${model.year}</span>
+                <h3>${model.name}</h3>
+                <p>${model.desc}</p>
+                <a href="${model.link}">View Details</a>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    // Initialize the page with all SUV models
+    document.addEventListener('DOMContentLoaded', () => {
+      renderSUVModels();
+      
+      // Add event listeners to filter buttons
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          button.classList.add('active');
+          // Filter models
+          renderSUVModels(button.dataset.filter);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

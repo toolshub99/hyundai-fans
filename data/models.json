@@ -1,0 +1,341 @@
+{
+  "popular": ["tucson", "santa-fe", "elantra"],
+  "categories": {
+    "SUV": ["tucson", "santa-fe", "kona", "palisade", "venue"],
+    "Sedan": ["elantra", "sonata"],
+    "Electric": ["ioniq-5", "ioniq-6"],
+    "Hatchback": ["veloster"]
+  },
+  "models": [
+    {
+      "id": "tucson",
+      "name": "Hyundai Tucson",
+      "type": "SUV",
+      "year": 2023,
+      "image": "images/tucson.jpg",
+      "specifications": {
+        "engine": "2.5L 4-Cylinder",
+        "horsepower": "187 hp",
+        "torque": "178 lb-ft",
+        "transmission": "8-Speed Automatic",
+        "dimensions": "182.3 in L x 73.4 in W x 65.6 in H",
+        "fuel_economy": "22 city / 28 highway mpg",
+        "seating": "5 passengers"
+      },
+      "versions": [
+        {
+          "trim": "SE",
+          "price": "$27,950",
+          "options": ["18-inch alloy wheels", "LED headlights", "Apple CarPlay/Android Auto"]
+        },
+        {
+          "trim": "SEL",
+          "price": "$29,950",
+          "options": ["19-inch alloy wheels", "Leather seats", "Blind-spot monitoring"]
+        },
+        {
+          "trim": "Limited",
+          "price": "$32,950",
+          "options": ["20-inch alloy wheels", "Panoramic sunroof", "Premium audio system"]
+        }
+      ]
+    },
+    {
+      "id": "santa-fe",
+      "name": "Hyundai Santa Fe",
+      "type": "SUV",
+      "year": 2023,
+      "image": "images/santa-fe.jpg",
+      "specifications": {
+        "engine": "2.5L Turbo 4-Cylinder",
+        "horsepower": "277 hp",
+        "torque": "311 lb-ft",
+        "transmission": "8-Speed Automatic",
+        "dimensions": "188.1 in L x 74.8 in W x 66.1 in H",
+        "fuel_economy": "20 city / 25 highway mpg",
+        "seating": "5-7 passengers"
+      },
+      "versions": [
+        {
+          "trim": "SE",
+          "price": "$28,500",
+          "options": ["18-inch alloy wheels", "LED headlights", "Third-row seating"]
+        },
+        {
+          "trim": "SEL",
+          "price": "$31,500",
+          "options": ["19-inch alloy wheels", "Leather seats", "Blind-spot monitoring"]
+        },
+        {
+          "trim": "Limited",
+          "price": "$35,500",
+          "options": ["20-inch alloy wheels", "Panoramic sunroof", "Premium audio system"]
+        }
+      ]
+    },
+    {
+      "id": "elantra",
+      "name": "Hyundai Elantra",
+      "type": "Sedan",
+      "year": 2023,
+      "image": "images/elantra.jpg",
+      "specifications": {
+        "engine": "2.0L 4-Cylinder",
+        "horsepower": "147 hp",
+        "torque": "132 lb-ft",
+        "transmission": "CVT",
+        "dimensions": "184.1 in L x 71.9 in W x 55.7 in H",
+        "fuel_economy": "31 city / 41 highway mpg",
+        "seating": "5 passengers"
+      },
+      "versions": [
+        {
+          "trim": "SE",
+          "price": "$20,650",
+          "options": ["16-inch alloy wheels", "LED headlights", "Apple CarPlay/Android Auto"]
+        },
+        {
+          "trim": "SEL",
+          "price": "$22,650",
+          "options": ["17-inch alloy wheels", "Leather seats", "Blind-spot monitoring"]
+        },
+        {
+          "trim": "Limited",
+          "price": "$25,650",
+          "options": ["18-inch alloy wheels", "Panoramic sunroof", "Premium audio system"]
+        }
+      ]
+    },
+    {
+      "id": "sonata",
+      "name": "Hyundai Sonata",
+      "type": "Sedan",
+      "year": 2023,
+      "image": "images/sonata.jpg",
+      "specifications": {
+        "engine": "2.5L 4-Cylinder",
+        "horsepower": "191 hp",
+        "torque": "181 lb-ft",
+        "transmission": "8-Speed Automatic",
+        "dimensions": "192.9 in L x 73.2 in W x 56.9 in H",
+        "fuel_economy": "22 city / 32 highway mpg",
+        "seating": "5 passengers"
+      },
+      "versions": [
+        {
+          "trim": "SE",
+          "price": "$27,400",
+          "options": ["17-inch alloy wheels", "LED headlights", "Apple CarPlay/Android Auto"]
+        },
+        {
+          "trim": "SEL",
+          "price": "$29,400",
+          "options": ["18-inch alloy wheels", "Leather seats", "Blind-spot monitoring"]
+        },
+        {
+          "trim": "Limited",
+          "price": "$32,400",
+          "options": ["19-inch alloy wheels", "Panoramic sunroof", "Premium audio system"]
+        }
+      ]
+    },
+    {
+      "id": "kona",
+      "name": "Hyundai Kona",
+      "type": "SUV",
+      "year": 2023,
+      "image": "images/kona.jpg",
+      "specifications": {
+        "engine": "2.0L 4-Cylinder",
+        "horsepower": "147 hp",
+        "torque": "132 lb-ft",
+        "transmission": "CVT",
+        "dimensions": "165.6 in L x 70.9 in W x 61.6 in H",
+        "fuel_economy": "30 city / 35 highway mpg",
+        "seating": "5 passengers"
+      },
+      "versions": [
+        {
+          "trim": "SE",
+          "price": "$21,650",
+          "options": ["16-inch alloy wheels", "LED headlights", "Apple CarPlay/Android Auto"]
+        },
+        {
+          "trim": "SEL",
+          "price": "$23,650",
+          "options": ["17-inch alloy wheels", "Leather seats", "Blind-spot monitoring"]
+        },
+        {
+          "trim": "Limited",
+          "price": "$26,650",
+          "options": ["18-inch alloy wheels", "Panoramic sunroof", "Premium audio system"]
+        }
+      ]
+    },
+    {
+      "id": "palisade",
+      "name": "Hyundai Palisade",
+      "type": "SUV",
+      "year": 2023,
+      "image": "images/palisade.jpg",
+      "specifications": {
+        "engine": "3.5L V6",
+        "horsepower": "291 hp",
+        "torque": "262 lb-ft",
+        "transmission": "8-Speed Automatic",
+        "dimensions": "196.1 in L x 77.8 in W x 68.9 in H",
+        "fuel_economy": "19 city / 24 highway mpg",
+        "seating": "7-8 passengers"
+      },
+      "versions": [
+        {
+          "trim": "SE",
+          "price": "$33,800",
+          "options": ["18-inch alloy wheels", "LED headlights", "Third-row seating"]
+        },
+        {
+          "trim": "SEL",
+          "price": "$36,800",
+          "options": ["20-inch alloy wheels", "Leather seats", "Blind-spot monitoring"]
+        },
+        {
+          "trim": "Limited",
+          "price": "$42,800",
+          "options": ["20-inch alloy wheels", "Panoramic sunroof", "Premium audio system"]
+        }
+      ]
+    },
+    {
+      "id": "venue",
+      "name": "Hyundai Venue",
+      "type": "SUV",
+      "year": 2023,
+      "image": "images/venue.jpg",
+      "specifications": {
+        "engine": "1.6L 4-Cylinder",
+        "horsepower": "121 hp",
+        "torque": "113 lb-ft",
+        "transmission": "CVT",
+        "dimensions": "159.1 in L x 69.7 in W x 61.6 in H",
+        "fuel_economy": "29 city / 33 highway mpg",
+        "seating": "5 passengers"
+      },
+      "versions": [
+        {
+          "trim": "SE",
+          "price": "$18,550",
+          "options": ["15-inch alloy wheels", "LED headlights", "Apple CarPlay/Android Auto"]
+        },
+        {
+          "trim": "SEL",
+          "price": "$20,550",
+          "options": ["16-inch alloy wheels", "Leather seats", "Blind-spot monitoring"]
+        },
+        {
+          "trim": "Denim",
+          "price": "$21,550",
+          "options": ["16-inch alloy wheels", "Unique denim interior", "Panoramic sunroof"]
+        }
+      ]
+    },
+    {
+      "id": "ioniq-5",
+      "name": "Hyundai Ioniq 5",
+      "type": "Electric",
+      "year": 2023,
+      "image": "images/ioniq-5.jpg",
+      "specifications": {
+        "engine": "Electric Motor",
+        "horsepower": "168 hp",
+        "torque": "258 lb-ft",
+        "transmission": "Single-Speed",
+        "dimensions": "182.5 in L x 74.4 in W x 63.2 in H",
+        "fuel_economy": "132 MPGe city / 117 MPGe highway",
+        "seating": "5 passengers"
+      },
+      "versions": [
+        {
+          "trim": "SE",
+          "price": "$43,650",
+          "options": ["17-inch alloy wheels", "LED headlights", "Wireless charging"]
+        },
+        {
+          "trim": "SEL",
+          "price": "$46,650",
+          "options": ["19-inch alloy wheels", "Leather seats", "Blind-spot monitoring"]
+        },
+        {
+          "trim": "Limited",
+          "price": "$52,650",
+          "options": ["20-inch alloy wheels", "Panoramic sunroof", "Premium audio system"]
+        }
+      ]
+    },
+    {
+      "id": "ioniq-6",
+      "name": "Hyundai Ioniq 6",
+      "type": "Electric",
+      "year": 2023,
+      "image": "images/ioniq-6.jpg",
+      "specifications": {
+        "engine": "Dual Electric Motors",
+        "horsepower": "320 hp",
+        "torque": "446 lb-ft",
+        "transmission": "Single-Speed",
+        "dimensions": "191.1 in L x 74.1 in W x 58.9 in H",
+        "fuel_economy": "132 MPGe city / 114 MPGe highway",
+        "seating": "5 passengers"
+      },
+      "versions": [
+        {
+          "trim": "SE",
+          "price": "$43,200",
+          "options": ["18-inch alloy wheels", "LED headlights", "Wireless charging"]
+        },
+        {
+          "trim": "SEL",
+          "price": "$46,200",
+          "options": ["20-inch alloy wheels", "Leather seats", "Blind-spot monitoring"]
+        },
+        {
+          "trim": "Limited",
+          "price": "$52,200",
+          "options": ["20-inch alloy wheels", "Panoramic sunroof", "Premium audio system"]
+        }
+      ]
+    },
+    {
+      "id": "veloster",
+      "name": "Hyundai Veloster",
+      "type": "Hatchback",
+      "year": 2023,
+      "image": "images/veloster.jpg",
+      "specifications": {
+        "engine": "2.0L 4-Cylinder",
+        "horsepower": "147 hp",
+        "torque": "132 lb-ft",
+        "transmission": "6-Speed Manual",
+        "dimensions": "167.9 in L x 70.9 in W x 55.1 in H",
+        "fuel_economy": "28 city / 37 highway mpg",
+        "seating": "4 passengers"
+      },
+      "versions": [
+        {
+          "trim": "Base",
+          "price": "$19,850",
+          "options": ["16-inch alloy wheels", "LED headlights", "Apple CarPlay/Android Auto"]
+        },
+        {
+          "trim": "Turbo",
+          "price": "$23,850",
+          "options": ["18-inch alloy wheels", "Sport suspension", "Blind-spot monitoring"]
+        },
+        {
+          "trim": "Ultimate",
+          "price": "$26,850",
+          "options": ["18-inch alloy wheels", "Leather seats", "Premium audio system"]
+        }
+      ]
+    }
+  ]
+}

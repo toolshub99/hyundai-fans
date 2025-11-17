@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specifications Guide | HyundaiFans - Complete Vehicle Specs</title>
+       <link rel="stylesheet" href="css/page.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #002856; /* Hyundai Blue */
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 25px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #002856;
+        }
+        
+        .nav-links a.active {
+            color: #002856;
+            font-weight: 600;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 40, 86, 0.8), rgba(0, 40, 86, 0.6)), url('https://images.unsplash.com/photo-1621135802920-133df287f89c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            margin-bottom: 50px;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #002856;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+            margin: 5px;
+        }
+        
+        .btn:hover {
+            background-color: #001a3d;
+        }
+        
+        .btn-secondary {
+            background-color: rgba(255,255,255,0.2);
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(255,255,255,0.3);
+        }
+        
+        /* Specs Content */
+        .specs-content {
+            margin: 60px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-header h2 {
+            font-size: 36px;
+            color: #002856;
+            margin-bottom: 15px;
+        }
+        
+        .section-header p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Quick Links */
+        .quick-links {
+            background-color: #f0f7ff;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+        
+        .quick-links h3 {
+            font-size: 20px;
+            color: #002856;
+            margin-bottom: 20px;
+        }
+        
+        .quick-links ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .quick-links li {
+            margin-bottom: 10px;
+        }
+        
+        .quick-links a {
+            color: #002856;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .quick-links a:hover {
+            color: #001a3d;
+            text-decoration: underline;
+        }
+        
+        /* Specs Sections */
+        .specs-sections {
+            background-color: white;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        .specs-category {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .specs-category:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .specs-category h3 {
+            font-size: 24px;
+            color: #002856;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e6f0ff;
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .specs-table th {
+            background-color: #f0f7ff;
+            color: #002856;
+            text-align: left;
+            padding: 12px 15px;
+            font-weight: 600;
+            border: 1px solid #ddd;
+        }
+        
+        .specs-table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+        }
+        
+        .specs-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .specs-table tr:hover {
+            background-color: #f0f7ff;
+        }
+        
+        .specs-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .specs-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 4px solid #002856;
+        }
+        
+        .specs-card h4 {
+            font-size: 18px;
+            color: #002856;
+            margin-bottom: 10px;
+        }
+        
+        .specs-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .highlight-box {
+            background-color: #f0f7ff;
+            border-left: 4px solid #002856;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 0;
+            color: #002856;
+            font-weight: 500;
+        }
+        
+        /* Model Selector */
+        .model-selector {
+            background-color: #f0f7ff;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .model-selector h3 {
+            font-size: 20px;
+            color: #002856;
+            margin-bottom: 20px;
+        }
+        
+        .model-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .model-btn {
+            background-color: white;
+            border: 2px solid #002856;
+            color: #002856;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .model-btn:hover, .model-btn.active {
+            background-color: #002856;
+            color: white;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background-color: #002856;
+            color: white;
+            padding: 60px 0;
+            margin: 60px 0;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .contact-info h3, .contact-form h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info p {
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+        
+        .contact-details {
+            list-style: none;
+        }
+        
+        .contact-details li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-details i {
+            margin-right: 10px;
+            color: #4dabf7;
+        }
+        
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ccc;
+        }
+        
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #4dabf7;
+            border-radius: 4px;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+        }
+        
+        .form-group input::placeholder, .form-group textarea::placeholder {
+            color: #ccc;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #001a3d;
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #ccc;
+            font-size: 14px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .top-nav {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+            
+            .nav-links {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-links li {
+                margin: 5px 10px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .specs-sections {
+                padding: 25px;
+            }
+            
+            .specs-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .specs-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .model-options {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .model-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="top-nav">
+                <div class="logo">HyundaiFans</div>
+                <ul class="nav-links">
+                    <li><a href="Hyundai-Models-SUVs-Electric-Hatchbacks-Sedans.html">Home</a></li>
+                    <li><a href="Hyundai-SUVs.html">SUVs</a></li>
+                    <li><a href="Hyundai-Sedans.html">Sedans</a></li>
+                    <li><a href="Hyundai-Electric.html">Electric</a></li>
+                    <li><a href="Hyundai-Hatchbacks.html">Hatchbacks</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Specifications Guide</h1>
+            <p>Complete technical specifications for all Hyundai models. Compare engines, dimensions, features, and performance data.</p>
+            <a href="#specs-details" class="btn">View Specifications</a>
+            <a href="#model-selector" class="btn btn-secondary">Select Model</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="specs-content">
+            <div class="section-header">
+                <h2>Hyundai Vehicle Specifications</h2>
+                <p>Detailed technical information for every Hyundai model in our database</p>
+            </div>
+            
+            <div class="quick-links">
+                <h3>Quick Navigation</h3>
+                <ul>
+                    <li><a href="#engine-specs">Engine Specifications</a></li>
+                    <li><a href="#performance">Performance Data</a></li>
+                    <li><a href="#dimensions">Dimensions & Capacity</a></li>
+                    <li><a href="#features">Key Features</a></li>
+                    <li><a href="#safety">Safety Features</a></li>
+                    <li><a href="#fuel-economy">Fuel Economy</a></li>
+                </ul>
+            </div>
+            
+            <div class="model-selector" id="model-selector">
+                <h3>Select Hyundai Model</h3>
+                <p>Choose a model to view detailed specifications</p>
+                <div class="model-options">
+                    <button class="model-btn active" data-model="palisade">Palisade</button>
+                    <button class="model-btn" data-model="santa-fe">Santa Fe</button>
+                    <button class="model-btn" data-model="tucson">Tucson</button>
+                    <button class="model-btn" data-model="ioniq5">IONIQ 5</button>
+                    <button class="model-btn" data-model="ioniq6">IONIQ 6</button>
+                    <button class="model-btn" data-model="kona">Kona</button>
+                    <button class="model-btn" data-model="elantra">Elantra</button>
+                    <button class="model-btn" data-model="sonata">Sonata</button>
+                </div>
+            </div>
+            
+            <div class="specs-sections" id="specs-details">
+                <div class="specs-category" id="engine-specs">
+                    <h3>Engine Specifications</h3>
+                    <p>Detailed engine and powertrain information for Hyundai models</p>
+                    
+                    <table class="specs-table">
+                        <thead>
+                            <tr>
+                                <th>Model</th>
+                                <th>Engine Type</th>
+                                <th>Displacement</th>
+                                <th>Horsepower</th>
+                                <th>Torque</th>
+                                <th>Transmission</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Palisade</td>
+                                <td>3.8L V6</td>
+                                <td>3.8L</td>
+                                <td>291 hp</td>
+                                <td>262 lb-ft</td>
+                                <td>8-Speed Automatic</td>
+                            </tr>
+                            <tr>
+                                <td>Santa Fe</td>
+                                <td>2.5L Turbo GDI</td>
+                                <td>2.5L</td>
+                                <td>277 hp</td>
+                                <td>311 lb-ft</td>
+                                <td>8-Speed DCT</td>
+                            </tr>
+                            <tr>
+                                <td>IONIQ 5</td>
+                                <td>Electric</td>
+                                <td>N/A</td>
+                                <td>320 hp (AWD)</td>
+                                <td>446 lb-ft</td>
+                                <td>Single-Speed Reduction</td>
+                            </tr>
+                            <tr>
+                                <td>Tucson</td>
+                                <td>2.5L GDI</td>
+                                <td>2.5L</td>
+                                <td>187 hp</td>
+                                <td>178 lb-ft</td>
+                                <td>8-Speed Automatic</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="specs-info">
+                        <div class="specs-card">
+                            <h4>Gasoline Engines</h4>
+                            <p>Hyundai's gasoline engines feature advanced GDI technology, variable valve timing, and turbocharging options for optimal performance and efficiency.</p>
+                        </div>
+                        <div class="specs-card">
+                            <h4>Electric Powertrains</h4>
+                            <p>E-GMP platform vehicles feature 800V architecture, ultra-fast charging capability, and dual motor AWD options with impressive torque output.</p>
+                        </div>
+                        <div class="specs-card">
+                            <h4>Hybrid Systems</h4>
+                            <p>Hyundai's hybrid systems combine efficient gasoline engines with electric motors for improved fuel economy without sacrificing performance.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="specs-category" id="performance">
+                    <h3>Performance Data</h3>
+                    <p>Acceleration, braking, and handling specifications</p>
+                    
+                    <table class="specs-table">
+                        <thead>
+                            <tr>
+                                <th>Model</th>
+                                <th>0-60 mph</th>
+                                <th>Top Speed</th>
+                                <th>Braking (60-0 mph)</th>
+                                <th>Curb Weight</th>
+                                <th>Drivetrain</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Palisade</td>
+                                <td>7.5 sec</td>
+                                <td>130 mph</td>
+                                <td>128 ft</td>
+                                <td>4,389 lbs</td>
+                                <td>AWD</td>
+                            </tr>
+                            <tr>
+                                <td>Santa Fe</td>
+                                <td>6.8 sec</td>
+                                <td>130 mph</td>
+                                <td>125 ft</td>
+                                <td>3,902 lbs</td>
+                                <td>AWD</td>
+                            </tr>
+                            <tr>
+                                <td>IONIQ 5</td>
+                                <td>4.4 sec</td>
+                                <td>115 mph</td>
+                                <td>118 ft</td>
+                                <td>4,663 lbs</td>
+                                <td>AWD</td>
+                            </tr>
+                            <tr>
+                                <td>Elantra N</td>
+                                <td>5.1 sec</td>
+                                <td>155 mph</td>
+                                <td>112 ft</td>
+                                <td>3,200 lbs</td>
+                                <td>FWD</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="specs-category" id="dimensions">
+                    <h3>Dimensions & Capacity</h3>
+                    <p>Exterior dimensions and interior space measurements</p>
+                    
+                    <table class="specs-table">
+                        <thead>
+                            <tr>
+                                <th>Model</th>
+                                <th>Length</th>
+                                <th>Width</th>
+                                <th>Height</th>
+                                <th>Wheelbase</th>
+                                <th>Cargo Space</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Palisade</td>
+                                <td>196.7 in</td>
+                                <td>77.8 in</td>
+                                <td>68.9 in</td>
+                                <td>114.2 in</td>
+                                <td>86.4 cu ft</td>
+                            </tr>
+                            <tr>
+                                <td>Santa Fe</td>
+                                <td>188.4 in</td>
+                                <td>74.8 in</td>
+                                <td>67.3 in</td>
+                                <td>108.9 in</td>
+                                <td>72.1 cu ft</td>
+                            </tr>
+                            <tr>
+                                <td>IONIQ 5</td>
+                                <td>182.5 in</td>
+                                <td>74.4 in</td>
+                                <td>63.0 in</td>
+                                <td>118.1 in</td>
+                                <td>59.3 cu ft</td>
+                            </tr>
+                            <tr>
+                                <td>Tucson</td>
+                                <td>182.3 in</td>
+                                <td>73.4 in</td>
+                                <td>65.6 in</td>
+                                <td>108.5 in</td>
+                                <td>80.3 cu ft</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="specs-category" id="features">
+                    <h3>Key Features & Technology</h3>
+                    <p>Standard and available features across Hyundai models</p>
+                    
+                    <div class="specs-info">
+                        <div class="specs-card">
+                            <h4>Infotainment Systems</h4>
+                            <p>Standard touchscreen displays ranging from 8-inch to 12.3-inch with navigation, Apple CarPlay, Android Auto, and Bluetooth connectivity.</p>
+                        </div>
+                        <div class="specs-card">
+                            <h4>Driver Assistance</h4>
+                            <p>Hyundai SmartSense suite including forward collision avoidance, lane keeping assist, blind spot monitoring, and adaptive cruise control.</p>
+                        </div>
+                        <div class="specs-card">
+                            <h4>Comfort & Convenience</h4>
+                            <p>Heated/ventilated seats, panoramic sunroof, wireless charging, digital key, and premium audio systems available across the lineup.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="specs-category" id="safety">
+                    <h3>Safety Features</h3>
+                    <p>Standard and available safety technologies</p>
+                    
+                    <table class="specs-table">
+                        <thead>
+                            <tr>
+                                <th>Safety Feature</th>
+                                <th>Description</th>
+                                <th>Availability</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Forward Collision-Avoidance Assist</td>
+                                <td>Detects vehicles, pedestrians, and cyclists</td>
+                                <td>Standard on most models</td>
+                            </tr>
+                            <tr>
+                                <td>Lane Keeping Assist</td>
+                                <td>Helps keep vehicle centered in lane</td>
+                                <td>Standard on most models</td>
+                            </tr>
+                            <tr>
+                                <td>Blind-Spot Collision-Avoidance Assist</td>
+                                <td>Warns of vehicles in blind spot</td>
+                                <td>Available on most models</td>
+                            </tr>
+                            <tr>
+                                <td>Smart Cruise Control</td>
+                                <td>Adaptive cruise with stop-and-go</td>
+                                <td>Available on most models</td>
+                            </tr>
+                            <tr>
+                                <td>Surround View Monitor</td>
+                                <td>360-degree camera system</td>
+                                <td>Available on select models</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="specs-category" id="fuel-economy">
+                    <h3>Fuel Economy & Efficiency</h3>
+                    <p>EPA-estimated fuel economy and electric range data</p>
+                    
+                    <table class="specs-table">
+                        <thead>
+                            <tr>
+                                <th>Model</th>
+                                <th>City MPG</th>
+                                <th>Highway MPG</th>
+                                <th>Combined MPG</th>
+                                <th>Electric Range</th>
+                                <th>Charging Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Palisade</td>
+                                <td>19</td>
+                                <td>26</td>
+                                <td>22</td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Santa Fe</td>
+                                <td>22</td>
+                                <td>28</td>
+                                <td>25</td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>IONIQ 5</td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                                <td>303 miles</td>
+                                <td>18 min (10-80%)</td>
+                            </tr>
+                            <tr>
+                                <td>Tucson Hybrid</td>
+                                <td>37</td>
+                                <td>36</td>
+                                <td>37</td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="highlight-box">
+                    <p><strong>Note:</strong> All specifications are based on manufacturer data and may vary by trim level, options, and driving conditions. Always verify specifications with your local Hyundai dealer.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <div class="section-header">
+                <h2>Need More Detailed Specifications?</h2>
+                <p>Contact us for specific technical data or comparison information</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Technical Support</h3>
+                    <p>Our technical team can provide detailed specifications, comparison data, or answer specific questions about Hyundai vehicles.</p>
+                    <ul class="contact-details">
+                        <li><i>✉️</i> technical@hyundaifans.com</li>
+                        <li><i>📞</i> +1 (555) 123-4567</li>
+                        <li><i>📍</i> 123 Automotive Drive, Detroit, MI 48201</li>
+                        <li><i>🕒</i> Response Time: Within 24 hours</li>
+                    </ul>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Request Specifications</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="specs-name">Your Name</label>
+                            <input type="text" id="specs-name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="specs-email">Your Email</label>
+                            <input type="email" id="specs-email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="specs-model">Model of Interest</label>
+                            <select id="specs-model">
+                                <option value="">Select model</option>
+                                <option value="palisade">Palisade</option>
+                                <option value="santa-fe">Santa Fe</option>
+                                <option value="tucson">Tucson</option>
+                                <option value="ioniq5">IONIQ 5</option>
+                                <option value="ioniq6">IONIQ 6</option>
+                                <option value="kona">Kona</option>
+                                <option value="elantra">Elantra</option>
+                                <option value="sonata">Sonata</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="specs-request">Specification Details Needed</label>
+                            <textarea id="specs-request" rows="5" placeholder="Please describe the specific technical information you need..."></textarea>
+                        </div>
+                        <button type="submit" class="btn">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Vehicle Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="category.html?type=suv">SUVs & Crossovers</a></li>
+                        <li><a href="category.html?type=sedan">Sedans</a></li>
+                        <li><a href="electric.html">Electric Vehicles</a></li>
+                        <li><a href="hatchback.html">Hatchbacks</a></li>
+                        <li><a href="performance.html">Performance Models</a></li>
+                        <li><a href="hybrid.html">Hybrid & PHEV</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Popular Models</h3>
+                    <ul class="footer-links">
+                        <li><a href="2025-hyundai-palisade-specifications.html">Palisade</a></li>
+                        <li><a href="2025-hyundai-santa-fe.html">Santa Fe</a></li>
+                        <li><a href="hyundai-ioniq5.html">IONIQ 5</a></li>
+                        <li><a href="hyundai-ioniq6.html">IONIQ 6</a></li>
+                        <li><a href="hyundai-kona-comparison.html">Kona</a></li>
+                        <li><a href="2017-hyundai-sonata.html">Sonata</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Specifications Guide</a></li>
+                        <li><a href="#">Comparison Tools</a></li>
+                        <li><a href="#">Owner Reviews</a></li>
+                        <li><a href="#">Maintenance Guides</a></li>
+                        <li><a href="#">Financing Calculator</a></li>
+                        <li><a href="#">Find a Dealer</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>About HyundaiFans</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Condition</a></li>
+                        <li><a href="#">Site Map</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                © 2025 HyundaiFans | This is an independent fan site not affiliated with Hyundai Motor Company. All specifications are based on manufacturer data and subject to change.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script for interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Model selector functionality
+            const modelButtons = document.querySelectorAll('.model-btn');
+            modelButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    modelButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const model = this.getAttribute('data-model');
+                    alert('Now showing specifications for Hyundai ' + this.textContent + '. In a real implementation, this would filter the specification tables.');
+                });
+            });
+            
+            // Form submission handling
+            const specsForm = document.querySelector('.contact-form form');
+            if (specsForm) {
+                specsForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your specification request. Our technical team will provide the detailed information you need within 24 hours.');
+                    this.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Hyundai Sedans - Sonata, Elantra, IONIQ 6 & More | HyundaiFans</title>
+  <meta name="title" content="Hyundai Sedans - Sonata, Elantra, IONIQ 6 & More">
+  <meta name="description" content="Explore Hyundai's full sedan lineup including the Sonata, Elantra, IONIQ 6, and Accent. Compare models, features, and find the perfect Hyundai sedan for your needs.">
+  <meta name="keywords" content="Hyundai Sedans, Hyundai Sonata, Hyundai Elantra, Hyundai IONIQ 6, Hyundai Accent, Hyundai sedans for sale">
+  <meta name="author" content="HyundaiFans">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hyundaifans.com/sedans">
+  <meta property="og:title" content="Hyundai Sedans - Sonata, Elantra, IONIQ 6 & More">
+  <meta property="og:description" content="Explore Hyundai's full sedan lineup including the Sonata, Elantra, IONIQ 6, and Accent.">
+  <meta property="og:image" content="https://hyundaifans.com/images/hyundai-sedans-social-preview.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://hyundaifans.com/sedans">
+  <meta property="twitter:title" content="Hyundai Sedans - Sonata, Elantra, IONIQ 6 & More">
+  <meta property="twitter:description" content="Explore Hyundai's full sedan lineup including the Sonata, Elantra, IONIQ 6, and Accent.">
+  <meta property="twitter:image" content="https://hyundaifans.com/images/hyundai-sedans-social-preview.jpg">
+  
+  <!-- Favicon & Icons -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/logo.png">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f4f5f7;
+      color: rgb(14, 1, 87);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #003366;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin-left: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #a8d0ff;
+    }
+
+    .nav-links a.active {
+      color: #a8d0ff;
+      font-weight: 600;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.9)), url('https://www.hyundai.com/content/dam/hyundai/ww/en/images/sedans/all-new-sonata/highlights/highlights-pc-01.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Filter Section */
+    .filter-section {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+    }
+
+    .filter-title {
+      margin-bottom: 15px;
+      color: #003366;
+    }
+
+    .filter-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .filter-btn {
+      background: #f0f4f8;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: 500;
+    }
+
+    .filter-btn:hover {
+      background: #e1e8f0;
+    }
+
+    .filter-btn.active {
+      background: #003366;
+      color: white;
+    }
+
+    /* Model Grid */
+    .model-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      color: #003366;
+    }
+
+    .card-content p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 15px;
+      min-height: 60px;
+    }
+
+    .card-content a {
+      text-decoration: none;
+      background: #003366;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-size: 14px;
+      display: inline-block;
+      transition: background 0.3s;
+      font-weight: 500;
+    }
+
+    .card-content a:hover {
+      background: #1E4072;
+    }
+
+    .model-year {
+      display: inline-block;
+      background: #e6f2ff;
+      color: #003366;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #002856;
+      color: white;
+      padding: 50px 0 20px;
+      margin-top: 80px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 30px;
+    }
+
+    .footer-column h3 {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .top-nav {
+        flex-direction: column;
+        padding: 15px 0;
+      }
+
+      .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .nav-links li {
+        margin: 5px 10px;
+      }
+      
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+    
+    .no-results {
+      text-align: center;
+      padding: 40px;
+      color: #666;
+      font-size: 18px;
+      grid-column: 1 / -1;
+    }
+  </style>
+</head>
+<body>
+   <header>
+        <div class="container">
+            <div class="top-nav">
+                <div class="logo">HyundaiFans</div>
+                <ul class="nav-links">
+                    <li><a href="Hyundai-Models-SUVs-Electric-Hatchbacks-Sedans.html">Home</a></li>
+                    <li><a href="Hyundai-SUVs.html">SUVs</a></li>
+                    <li><a href="Hyundai-Sedans.html">Sedans</a></li>
+                    <li><a href="Hyundai-Electric.html">Electric</a></li>
+                    <li><a href="Hyundai-Hatchbacks.html">Hatchbacks</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Hyundai Sedan Models</h1>
+      <p>Discover Hyundai's complete lineup of sedans, from the efficient Accent to the sophisticated Sonata and innovative IONIQ 6. Find the perfect sedan for your driving needs.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="filter-section">
+      <h2 class="filter-title">Filter by Year</h2>
+      <div class="filter-options">
+        <button class="filter-btn active" data-filter="all">All Years</button>
+        <button class="filter-btn" data-filter="2025">2025</button>
+        <button class="filter-btn" data-filter="2024">2024</button>
+        <button class="filter-btn" data-filter="2023">2023</button>
+        <button class="filter-btn" data-filter="2022">2022</button>
+        <button class="filter-btn" data-filter="2020">2020</button>
+        <button class="filter-btn" data-filter="2017">2017</button>
+        <button class="filter-btn" data-filter="2016">2016</button>
+        <button class="filter-btn" data-filter="2015">2015</button>
+        <button class="filter-btn" data-filter="2010">2010</button>
+        <button class="filter-btn" data-filter="2009">2009</button>
+        <button class="filter-btn" data-filter="2008">2008</button>
+        <button class="filter-btn" data-filter="2007">2007</button>
+        <button class="filter-btn" data-filter="2006">2006</button>
+      </div>
+    </div>
+
+    <div id="sedan-content"></div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Vehicle Categories</h3>
+          <ul class="footer-links">
+            <li><a href="category.html?type=suv">SUVs & Crossovers</a></li>
+            <li><a href="category.html?type=sedan">Sedans</a></li>
+            <li><a href="electric.html">Electric Vehicles</a></li>
+            <li><a href="hatchback.html">Hatchbacks</a></li>
+            <li><a href="performance.html">Performance Models</a></li>
+            <li><a href="hybrid.html">Hybrid & PHEV</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Popular Models</h3>
+          <ul class="footer-links">
+            <li><a href="2025-hyundai-palisade-specifications.html">Palisade</a></li>
+            <li><a href="2025-hyundai-santa-fe.html">Santa Fe</a></li>
+            <li><a href="hyundai-ioniq5.html">IONIQ 5</a></li>
+            <li><a href="hyundai-ioniq6.html">IONIQ 6</a></li>
+            <li><a href="hyundai-kona-comparison.html">Kona</a></li>
+            <li><a href="2017-hyundai-sonata.html">Sonata</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul class="footer-links">
+            <li><a href="#">Specifications Guide</a></li>
+            <li><a href="#">Comparison Tools</a></li>
+            <li><a href="#">Owner Reviews</a></li>
+            <li><a href="#">Maintenance Guides</a></li>
+            <li><a href="#">Financing Calculator</a></li>
+            <li><a href="#">Find a Dealer</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>About HyundaiFans</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Condition</a></li>
+            <li><a href="#">Site Map</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        © 2025 HyundaiFans | This is an independent fan site not affiliated with Hyundai Motor Company. All specifications are based on manufacturer data and subject to change.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Hyundai Sedan models data
+    const sedanModels = [
+      {
+        name: "Hyundai Sonata",
+        year: "2023",
+        category: "sedan",
+        img: "https://www.hyundaiusa.com/us/en/vehicles/sonata/gallery/_jcr_content/gallery/01-image-thumbnail.img.800.jpg",
+        desc: "Mid-size sedan blending performance, style, and technology.",
+        link: "2023-hyundai-sonata.html"
+      },
+      {
+        name: "Hyundai Sonata",
+        year: "2022",
+        category: "sedan",
+        img: "https://www.hyundaiusa.com/us/en/vehicles/sonata/gallery/_jcr_content/gallery/01-image-thumbnail.img.800.jpg",
+        desc: "Reliable Sonata with MPG, pricing, and features review.",
+        link: "2022-Hyundai-Sonata-Review-MPG-Pricing-&-Features.html"
+      },
+      {
+        name: "Hyundai Sonata",
+        year: "2020",
+        category: "sedan",
+        img: "https://www.hyundaiusa.com/us/en/vehicles/sonata/gallery/_jcr_content/gallery/01-image-thumbnail.img.800.jpg",
+        desc: "Popular Sonata model with comprehensive features.",
+        link: "2020 Hyundai Sonata.html"
+      },
+      {
+        name: "Hyundai Sonata",
+        year: "2017",
+        category: "sedan",
+        img: "https://www.hyundaiusa.com/us/en/vehicles/sonata/gallery/_jcr_content/gallery/01-image-thumbnail.img.800.jpg",
+        desc: "Classic Sonata with proven reliability.",
+        link: "hyundai-sonata-2017.html"
+      },
+      {
+        name: "Hyundai Sonata",
+        year: "2016",
+        category: "sedan",
+        img: "https://www.hyundaiusa.com/us/en/vehicles/sonata/gallery/_jcr_content/gallery/01-image-thumbnail.img.800.jpg",
+        desc: "Well-established Sonata model.",
+        link: "2016-Hyundai-Sonata.html"
+      },
+      {
+        name: "Hyundai Sonata Sport",
+        year: "2015",
+        category: "sedan",
+        img: "https://www.hyundaiusa.com/us/en/vehicles/sonata/gallery/_jcr_content/gallery/01-image-thumbnail.img.800.jpg",
+        desc: "Sporty version of the Sonata lineup.",
+        link: "2015-Hyundai-Sonata-Sport.html"
+      },
+      {
+        name: "Hyundai Sonata",
+        year: "2010",
+        category: "sedan",
+        img: "https://www.hyundaiusa.com/us/en/vehicles/sonata/gallery/_jcr_content/gallery/01-image-thumbnail.img.800.jpg",
+        desc: "Earlier Sonata model with solid performance.",
+        link: "2010-hyundai-sonata.html"
+      },
+      {
+        name: "Hyundai Sonata",
+        year: "2009",
+        category: "sedan",
+        img: "https://www.hyundaiusa.com/us/en/vehicles/sonata/gallery/_jcr_content/gallery/01-image-thumbnail.img.800.jpg",
+        desc: "Sonata with MPG, value analysis, and features review.",
+        link: "2009-Hyundai-Sonata-Review-MPG-Value-Analysis-&-Features.html"
+      },
+      {
+        name: "Hyundai Sonata",
+        year: "2008",
+        category: "sedan",
+        img: "https://www.hyundaiusa.com/us/en/vehicles/sonata/gallery/_jcr_content/gallery/01-image-thumbnail.img.800.jpg",
+        desc: "Reliable Sonata from 2008.",
+        link: "2008-hyundai-sonata.html"
+      },
+      {
+        name: "Hyundai Sonata",
+        year: "2007",
+        category: "sedan",
+        img: "https://www.hyundaiusa.com/us/en/vehicles/sonata/gallery/_jcr_content/gallery/01-image-thumbnail.img.800.jpg",
+        desc: "Classic Sonata model.",
+        link: "2007-hyundai-sonata.html"
+      },
+      {
+        name: "Hyundai Sonata",
+        year: "2006",
+        category: "sedan",
+        img: "https://www.hyundaiusa.com/us/en/vehicles/sonata/gallery/_jcr_content/gallery/01-image-thumbnail.img.800.jpg",
+        desc: "Early Sonata model with proven durability.",
+        link: "2006-hyundai-sonata.html"
+      },
+      {
+        name: "Hyundai Elantra",
+        year: "2024",
+        category: "sedan",
+        img: "https://www.hyundaiusa.com/us/en/vehicles/elantra/gallery/_jcr_content/gallery/01-image-thumbnail.img.800.jpg",
+        desc: "Compact sedan with modern design and advanced technology.",
+        link: "hyundai-elantra.html"
+      },
+      {
+        name: "Hyundai Elantra N",
+        year: "2024",
+        category: "sedan",
+        img: "https://www.hyundaiusa.com/us/en/vehicles/elantra-n/gallery/_jcr_content/gallery/01-image-thumbnail.img.800.jpg",
+        desc: "High-performance version of the Elantra with track capabilities.",
+        link: "hyundai-elantra-n.html"
+      },
+      {
+        name: "Hyundai Accent",
+        year: "2023",
+        category: "sedan",
+        img: "https://www.hyundaiusa.com/us/en/vehicles/accent/gallery/_jcr_content/gallery/01-image-thumbnail.img.800.jpg",
+        desc: "Compact and efficient sedan perfect for city driving.",
+        link: "hyundai-accent.html"
+      },
+      {
+        name: "Hyundai IONIQ 6",
+        year: "2025",
+        category: "sedan",
+        img: "https://www.hyundaiusa.com/us/en/vehicles/ioniq6/gallery/_jcr_content/gallery/01-image-thumbnail.img.800.jpg",
+        desc: "Electric sedan offering aerodynamic design and ultra-fast charging.",
+        link: "Hyundai-ONIQ-6.html"
+      }
+    ];
+
+    // Function to render Sedan models
+    function renderSedanModels(filterYear = 'all') {
+      const container = document.getElementById("sedan-content");
+      
+      // Filter models based on selected year
+      const filteredModels = filterYear === 'all' 
+        ? sedanModels 
+        : sedanModels.filter(model => model.year === filterYear);
+      
+      if (filteredModels.length === 0) {
+        container.innerHTML = '<div class="no-results">No sedan models found for the selected year.</div>';
+        return;
+      }
+      
+      // Generate HTML for filtered models
+      container.innerHTML = `
+        <div class="model-list">
+          ${filteredModels.map(model => `
+            <div class="card">
+              <img src="${model.img}" alt="${model.name}">
+              <div class="card-content">
+                <span class="model-year">${model.year}</span>
+                <h3>${model.name}</h3>
+                <p>${model.desc}</p>
+                <a href="${model.link}">View Details</a>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    // Initialize the page with all Sedan models
+    document.addEventListener('DOMContentLoaded', () => {
+      renderSedanModels();
+      
+      // Add event listeners to filter buttons
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          button.classList.add('active');
+          // Filter models
+          renderSedanModels(button.dataset.filter);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

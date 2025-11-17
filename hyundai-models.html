@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hyundai Models - SUVs, Electric, Hatchbacks, Sedans</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body { font-family: Arial, sans-serif; background: #f7f7f7; margin: 0; padding: 20px; }
+    h1 { text-align: center; color: #003366; }
+    .category { margin-top: 40px; }
+    .model-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+    .card {
+      background: white; padding: 15px; border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: 0.3s;
+    }
+    .card:hover { transform: translateY(-4px); }
+    .card a { text-decoration: none; color: #1E4072; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Hyundai Models by Category</h1>
+
+  <div id="content"></div>
+
+  <script>
+    // List of all your HTML files (you can automate this later)
+    const files = [
+      "2007-hyundai-sonata.html",
+      "2023-hyundai-santa-fe.html",
+      "2025-Hyundai-Palisade-Specifications.html",
+      "2024-Hyundai-Kona-SEL.html",
+      "2025-Hyundai.html",
+      "electric.html",
+      "Hyundai Electric.html",
+      "hatchback-models.html",
+      "Hyundai Hatchbacks.html"
+    ];
+
+    const categories = {
+      suv: [],
+      electric: [],
+      hatchback: [],
+      sedan: []
+    };
+
+    files.forEach(file => {
+      const name = file.replace(/\.html$/i, "").replace(/-/g, " ");
+      const lower = name.toLowerCase();
+
+      if (lower.includes("santa fe") || lower.includes("kona") || lower.includes("palisade")) {
+        categories.suv.push({ name, file });
+      } else if (lower.includes("electric") || lower.includes("ioniq")) {
+        categories.electric.push({ name, file });
+      } else if (lower.includes("hatchback")) {
+        categories.hatchback.push({ name, file });
+      } else if (lower.includes("sonata") || lower.includes("elantra")) {
+        categories.sedan.push({ name, file });
+      }
+    });
+
+    const container = document.getElementById("content");
+
+    for (const [type, posts] of Object.entries(categories)) {
+      if (posts.length > 0) {
+        const section = document.createElement("div");
+        section.className = "category";
+        section.innerHTML = `<h2>${type.toUpperCase()}</h2>
+          <div class="model-list">
+            ${posts.map(p => `<div class="card"><a href="${p.file}">${p.name}</a></div>`).join("")}
+          </div>`;
+        container.appendChild(section);
+      }
+    }
+  </script>
+</body>
+</html>

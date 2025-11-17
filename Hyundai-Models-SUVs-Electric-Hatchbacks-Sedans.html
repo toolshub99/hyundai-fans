@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Hyundai Models - SUVs, Electric, Hatchbacks, Sedans</title>
+  <meta name="title" content="Hyundai Models - SUVs, Electric, Hatchbacks, Sedans">
+  <meta name="description" content="Explore the complete lineup of Hyundai vehicles including SUVs, electric cars, sedans, and hatchbacks. Find specs, features, and details for all Hyundai models.">
+  <meta name="keywords" content="Hyundai, cars, SUVs, electric vehicles, sedans, hatchbacks, Palisade, Santa Fe, IONIQ, Sonata, Kona">
+  <meta name="author" content="HyundaiFans">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hyundaifans.com/">
+  <meta property="og:title" content="Hyundai Models - SUVs, Electric, Hatchbacks, Sedans">
+  <meta property="og:description" content="Explore the complete lineup of Hyundai vehicles including SUVs, electric cars, sedans, and hatchbacks.">
+  <meta property="og:image" content="https://hyundaifans.com/images/hyundai-models-social-preview.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://hyundaifans.com/">
+  <meta property="twitter:title" content="Hyundai Models - SUVs, Electric, Hatchbacks, Sedans">
+  <meta property="twitter:description" content="Explore the complete lineup of Hyundai vehicles including SUVs, electric cars, sedans, and hatchbacks.">
+  <meta property="twitter:image" content="https://hyundaifans.com/images/hyundai-models-social-preview.jpg">
+  <!-- ✅ Favicon & Icons -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f4f5f7;
+      color: rgb(14, 1, 87);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #003366;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: white; /* Hyundai Blue */
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin-left: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #002856;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #002856;
+      color: white;
+      padding: 50px 0 20px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 30px;
+    }
+
+    .footer-column h3 {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .top-nav {
+        flex-direction: column;
+        padding: 15px 0;
+      }
+
+      .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .nav-links li {
+        margin: 5px 10px;
+      }
+    }
+    h1 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 30px;
+      margin-top: 50px;
+    }
+    h2 {
+      color: #003366;
+      margin-top: 50px;
+      border-left: 5px solid #003366;
+      padding-left: 10px;
+    }
+    .model-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 15px;
+    }
+    .card-content h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #003366;
+    }
+    .card-content p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .card-content a {
+      text-decoration: none;
+      background: #003366;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+    .card-content a:hover {
+      background: #1E4072;
+    }
+  </style>
+</head>
+<body>
+   <header>
+        <div class="container">
+            <div class="top-nav">
+                <div class="logo">HyundaiFans</div>
+                <ul class="nav-links">
+                    <li><a href="Hyundai-Models-SUVs-Electric-Hatchbacks-Sedans.html">Home</a></li>
+                    <li><a href="Hyundai-SUVs.html">SUVs</a></li>
+                    <li><a href="Hyundai-Sedans.html">Sedans</a></li>
+                    <li><a href="Hyundai-Electric.html">Electric</a></li>
+                    <li><a href="Hyundai-Hatchbacks.html">Hatchbacks</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+  <div class="container">
+    <h1>Hyundai Models by Category</h1>
+
+  <div id="content"></div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Vehicle Categories</h3>
+          <ul class="footer-links">
+            <li><a href="category.html?type=suv">SUVs & Crossovers</a></li>
+            <li><a href="category.html?type=sedan">Sedans</a></li>
+            <li><a href="electric.html">Electric Vehicles</a></li>
+            <li><a href="hatchback.html">Hatchbacks</a></li>
+            <li><a href="performance.html">Performance Models</a></li>
+            <li><a href="hybrid.html">Hybrid & PHEV</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Popular Models</h3>
+          <ul class="footer-links">
+            <li><a href="2025-hyundai-palisade-specifications.html">Palisade</a></li>
+            <li><a href="2025-hyundai-santa-fe.html">Santa Fe</a></li>
+            <li><a href="hyundai-ioniq5.html">IONIQ 5</a></li>
+            <li><a href="hyundai-ioniq6.html">IONIQ 6</a></li>
+            <li><a href="hyundai-kona-comparison.html">Kona</a></li>
+            <li><a href="2017-hyundai-sonata.html">Sonata</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul class="footer-links">
+            <li><a href="#">Specifications Guide</a></li>
+            <li><a href="#">Comparison Tools</a></li>
+            <li><a href="#">Owner Reviews</a></li>
+            <li><a href="#">Maintenance Guides</a></li>
+            <li><a href="#">Financing Calculator</a></li>
+            <li><a href="#">Find a Dealer</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>About HyundaiFans</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Condition</a></li>
+            <li><a href="#">Site Map</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        © 2025 HyundaiFans | This is an independent fan site not affiliated with Hyundai Motor Company. All specifications are based on manufacturer data and subject to change.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 🚗 Complete Hyundai models data — all images replaced with Wikimedia Commons (Creative Commons)
+    const models = [
+      // SUVs
+      {
+        name: "2025 Hyundai Palisade",
+        category: "suv",
+        img: "https://upload.wikimedia.org/wikipedia/commons/b/b3/2023_Hyundai_Palisade_Calligraphy_3.8_facelift.jpg",
+        desc: "Luxury family SUV with advanced safety features and a premium interior.",
+        link: "2025-Hyundai-Palisade-Specifications.html"
+      },
+      {
+        name: "2024 Hyundai Kona",
+        category: "suv",
+        img: "https://upload.wikimedia.org/wikipedia/commons/3/3a/2024_Hyundai_Kona_Limited_1.6T_in_Ultimate_Red%2C_front_left.jpg",
+        desc: "Compact SUV with a modern design and smart connectivity.",
+        link: "2024-Hyundai-Kona-SEL.html"
+      },
+      {
+        name: "2023 Hyundai Santa Fe",
+        category: "suv",
+        img: "https://upload.wikimedia.org/wikipedia/commons/3/30/2021_Hyundai_Santa_Fe_1.6_T-GDi_PHEV_Premium_4WD_Front.jpg",
+        desc: "Spacious and efficient SUV perfect for family adventures.",
+        link: "2023-hyundai-santa-fe.html"
+      },
+      {
+        name: "2024 Hyundai Santa Fe",
+        category: "suv",
+        img: "https://upload.wikimedia.org/wikipedia/commons/a/a8/2024_Hyundai_Santa_Fe_Calligraphy_AWD%2C_front_11.3.24.jpg",
+        desc: "Latest Santa Fe with enhanced features and technology.",
+        link: "2024 Hyundai Santa Fe.html"
+      },
+      {
+        name: "2025 Hyundai Santa Fe",
+        category: "suv",
+        img: "https://upload.wikimedia.org/wikipedia/commons/a/a8/2024_Hyundai_Santa_Fe_Calligraphy_AWD%2C_front_11.3.24.jpg",
+        desc: "Next-generation Santa Fe with bold design and advanced tech.",
+        link: "2025-Hyundai-Santa-Fe.html"
+      },
+      {
+        name: "2022 Hyundai Palisade",
+        category: "suv",
+        img: "https://upload.wikimedia.org/wikipedia/commons/7/74/2020_Hyundai_Palisade_Ultimate_AWD_front_4.1.20.jpg",
+        desc: "Three-row SUV with premium features and family-friendly design.",
+        link: "2022-Hyundai-Palisade-Review-Features-&-Awards.html"
+      },
+      {
+        name: "2022-2023 Hyundai Palisade Calligraphy",
+        category: "suv",
+        img: "https://upload.wikimedia.org/wikipedia/commons/b/b3/2023_Hyundai_Palisade_Calligraphy_3.8_facelift.jpg",
+        desc: "Top-tier Palisade with luxury Calligraphy trim.",
+        link: "2022-2023-Hyundai-Palisade-Calligraphy.html"
+      },
+      {
+        name: "2024 Hyundai Santa Fe Awards",
+        category: "suv",
+        img: "https://upload.wikimedia.org/wikipedia/commons/a/a8/2024_Hyundai_Santa_Fe_Calligraphy_AWD%2C_front_11.3.24.jpg",
+        desc: "Award-winning Santa Fe with reliability and features.",
+        link: "2024-Hyundai-santa-Fe-Awards-Reliability-&-For-Sale-Information.html"
+      },
+      {
+        name: "Hyundai Kona Comparison",
+        category: "suv",
+        img: "https://upload.wikimedia.org/wikipedia/commons/2/23/2021_Hyundai_Kona_N_Line_1.6_Front.jpg",
+        desc: "Compare Kona models and features.",
+        link: "Hyundai-Kona-Comparison.html"
+      },
+
+      // Electric Vehicles
+      {
+        name: "2025 Hyundai IONIQ 5",
+        category: "electric",
+        img: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Hyundai_Ioniq_5_2021_IMG_3693.jpg",
+        desc: "Fully electric crossover with cutting-edge technology and long range.",
+        link: "Hyundai-IONIQ-5.html"
+      },
+      {
+        name: "2025 Hyundai IONIQ 6",
+        category: "electric",
+        img: "https://upload.wikimedia.org/wikipedia/commons/c/c7/2023_Hyundai_Ioniq_6_Limited_in_Serenity_White_Pearl%2C_front_left.jpg",
+        desc: "Electric sedan offering aerodynamic design and ultra-fast charging.",
+        link: "Hyundai-ONIQ-6.html"
+      },
+      {
+        name: "2025 Hyundai",
+        category: "electric",
+        img: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Hyundai_Ioniq_5_2021_IMG_3693.jpg",
+        desc: "Latest Hyundai electric vehicle innovations.",
+        link: "2025 Hyundai.html"
+      },
+
+      // Sedans
+      {
+        name: "2023 Hyundai Sonata",
+        category: "sedan",
+        img: "https://upload.wikimedia.org/wikipedia/commons/0/0d/2020_Hyundai_Sonata_Limited_1.6T_Front.jpg",
+        desc: "Mid-size sedan blending performance, style, and technology.",
+        link: "2023-hyundai-sonata.html"
+      },
+      {
+        name: "2022 Hyundai Sonata",
+        category: "sedan",
+        img: "https://upload.wikimedia.org/wikipedia/commons/0/0d/2020_Hyundai_Sonata_Limited_1.6T_Front.jpg",
+        desc: "Reliable Sonata with MPG, pricing, and features review.",
+        link: "2022-Hyundai-Sonata-Review-MPG-Pricing-&-Features.html"
+      },
+      {
+        name: "2020 Hyundai Sonata",
+        category: "sedan",
+        img: "https://upload.wikimedia.org/wikipedia/commons/0/0d/2020_Hyundai_Sonata_Limited_1.6T_Front.jpg",
+        desc: "Popular Sonata model with comprehensive features.",
+        link: "2020 Hyundai Sonata.html"
+      },
+      {
+        name: "2017 Hyundai Sonata",
+        category: "sedan",
+        img: "https://upload.wikimedia.org/wikipedia/commons/5/56/2015_Hyundai_Sonata_SE_--_07-26-2015.jpg",
+        desc: "Classic Sonata with proven reliability.",
+        link: "hyundai-sonata-2017.html"
+      },
+      {
+        name: "2016 Hyundai Sonata",
+        category: "sedan",
+        img: "https://upload.wikimedia.org/wikipedia/commons/5/56/2015_Hyundai_Sonata_SE_--_07-26-2015.jpg",
+        desc: "Well-established Sonata model.",
+        link: "2016-Hyundai-Sonata.html"
+      },
+      {
+        name: "2015 Hyundai Sonata Sport",
+        category: "sedan",
+        img: "https://upload.wikimedia.org/wikipedia/commons/5/56/2015_Hyundai_Sonata_SE_--_07-26-2015.jpg",
+        desc: "Sporty version of the Sonata lineup.",
+        link: "2015-Hyundai-Sonata-Sport.html"
+      },
+      {
+        name: "2010 Hyundai Sonata",
+        category: "sedan",
+        img: "https://upload.wikimedia.org/wikipedia/commons/4/41/2009_Hyundai_Sonata_--_NHTSA.jpg",
+        desc: "Earlier Sonata model with solid performance.",
+        link: "2010-hyundai-sonata.html"
+      },
+      {
+        name: "2009 Hyundai Sonata",
+        category: "sedan",
+        img: "https://upload.wikimedia.org/wikipedia/commons/4/41/2009_Hyundai_Sonata_--_NHTSA.jpg",
+        desc: "Sonata with MPG, value analysis, and features review.",
+        link: "2009-Hyundai-Sonata-Review-MPG-Value-Analysis-&-Features.html"
+      },
+      {
+        name: "2008 Hyundai Sonata",
+        category: "sedan",
+        img: "https://upload.wikimedia.org/wikipedia/commons/4/41/2009_Hyundai_Sonata_--_NHTSA.jpg",
+        desc: "Reliable Sonata from 2008.",
+        link: "2008-hyundai-sonata.html"
+      },
+      {
+        name: "2007 Hyundai Sonata",
+        category: "sedan",
+        img: "https://upload.wikimedia.org/wikipedia/commons/f/f0/Hyundai_Sonata_LX_%28North_America%29.jpg",
+        desc: "Classic Sonata model.",
+        link: "2007-hyundai-sonata.html"
+      },
+      {
+        name: "2006 Hyundai Sonata",
+        category: "sedan",
+        img: "https://upload.wikimedia.org/wikipedia/commons/f/f0/Hyundai_Sonata_LX_%28North_America%29.jpg",
+        desc: "Early Sonata model with proven durability.",
+        link: "2006-hyundai-sonata.html"
+      },
+
+      // Hatchbacks
+      {
+        name: "Hyundai Hatchbacks",
+        category: "hatchback",
+        img: "https://upload.wikimedia.org/wikipedia/commons/6/65/2017_Hyundai_i30_%28PD%29_Active_hatchback_%282018-08-06%29_01.jpg",
+        desc: "Complete range of Hyundai hatchback models.",
+        link: "Hyundai Hatchbacks.html"
+      }
+    ];
+
+    // Group models by category
+    const grouped = models.reduce((acc, model) => {
+      (acc[model.category] = acc[model.category] || []).push(model);
+      return acc;
+    }, {});
+
+    const container = document.getElementById("content");
+
+    // Generate sections dynamically
+    for (const [category, cars] of Object.entries(grouped)) {
+      const section = document.createElement("section");
+      section.innerHTML = `
+        <h2>${category.toUpperCase()}</h2>
+        <div class="model-list">
+          ${cars.map(car => `
+            <div class="card">
+              <img src="${car.img}" alt="${car.name}">
+              <div class="card-content">
+                <h3>${car.name}</h3>
+                <p>${car.desc}</p>
+                <a href="${car.link}">View Details</a>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+      container.appendChild(section);
+    }
+  </script>
+</body>
+</html>

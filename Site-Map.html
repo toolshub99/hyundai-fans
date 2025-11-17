@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Map | HyundaiFans - Complete Website Navigation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #002856; /* Hyundai Blue */
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 25px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #002856;
+        }
+        
+        .nav-links a.active {
+            color: #002856;
+            font-weight: 600;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 40, 86, 0.8), rgba(0, 40, 86, 0.6)), url('https://images.unsplash.com/photo-1565689228866-1f7bafba44a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            margin-bottom: 50px;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #002856;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+            margin: 5px;
+        }
+        
+        .btn:hover {
+            background-color: #001a3d;
+        }
+        
+        .btn-secondary {
+            background-color: rgba(255,255,255,0.2);
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(255,255,255,0.3);
+        }
+        
+        /* Site Map Content */
+        .sitemap-content {
+            margin: 60px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-header h2 {
+            font-size: 36px;
+            color: #002856;
+            margin-bottom: 15px;
+        }
+        
+        .section-header p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Site Map Sections */
+        .sitemap-sections {
+            background-color: white;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        .sitemap-category {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .sitemap-category:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .sitemap-category h3 {
+            font-size: 24px;
+            color: #002856;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e6f0ff;
+        }
+        
+        .sitemap-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        
+        .sitemap-link-group {
+            margin-bottom: 20px;
+        }
+        
+        .sitemap-link-group h4 {
+            font-size: 18px;
+            color: #002856;
+            margin-bottom: 10px;
+        }
+        
+        .sitemap-link-group ul {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .sitemap-link-group li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+        
+        .sitemap-link-group li:before {
+            content: "•";
+            color: #002856;
+            position: absolute;
+            left: 0;
+        }
+        
+        .sitemap-link-group a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .sitemap-link-group a:hover {
+            color: #002856;
+            text-decoration: underline;
+        }
+        
+        .highlight-box {
+            background-color: #f0f7ff;
+            border-left: 4px solid #002856;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 0;
+            color: #002856;
+            font-weight: 500;
+        }
+        
+        /* Quick Search */
+        .quick-search {
+            background-color: #f0f7ff;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+        
+        .quick-search h3 {
+            font-size: 20px;
+            color: #002856;
+            margin-bottom: 20px;
+        }
+        
+        .search-box {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .search-box input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #002856;
+            border-radius: 4px 0 0 4px;
+            font-size: 16px;
+        }
+        
+        .search-box button {
+            background-color: #002856;
+            color: white;
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .search-box button:hover {
+            background-color: #001a3d;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background-color: #002856;
+            color: white;
+            padding: 60px 0;
+            margin: 60px 0;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .contact-info h3, .contact-form h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info p {
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+        
+        .contact-details {
+            list-style: none;
+        }
+        
+        .contact-details li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-details i {
+            margin-right: 10px;
+            color: #4dabf7;
+        }
+        
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ccc;
+        }
+        
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #4dabf7;
+            border-radius: 4px;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+        }
+        
+        .form-group input::placeholder, .form-group textarea::placeholder {
+            color: #ccc;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #001a3d;
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #ccc;
+            font-size: 14px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .top-nav {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+            
+            .nav-links {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-links li {
+                margin: 5px 10px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .sitemap-sections {
+                padding: 25px;
+            }
+            
+            .sitemap-links {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+     <header>
+        <div class="container">
+            <div class="top-nav">
+                <div class="logo">HyundaiFans</div>
+                <ul class="nav-links">
+                    <li><a href="Hyundai-Models-SUVs-Electric-Hatchbacks-Sedans.html">Home</a></li>
+                    <li><a href="Hyundai-SUVs.html">SUVs</a></li>
+                    <li><a href="Hyundai-Sedans.html">Sedans</a></li>
+                    <li><a href="Hyundai-Electric.html">Electric</a></li>
+                    <li><a href="Hyundai-Hatchbacks.html">Hatchbacks</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Site Map</h1>
+            <p>Navigate through our complete website structure to find exactly what you're looking for.</p>
+            <a href="#sitemap-details" class="btn">View Site Map</a>
+            <a href="#search" class="btn btn-secondary">Quick Search</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="sitemap-content">
+            <div class="section-header">
+                <h2>Complete Website Navigation</h2>
+                <p>Explore all sections and pages available on HyundaiFans website</p>
+            </div>
+            
+            <div class="quick-search" id="search">
+                <h3>Quick Search</h3>
+                <p>Can't find what you're looking for? Search our entire website:</p>
+                <div class="search-box">
+                    <input type="text" placeholder="Enter search terms...">
+                    <button type="button">Search</button>
+                </div>
+            </div>
+            
+            <div class="sitemap-sections" id="sitemap-details">
+                <div class="sitemap-category">
+                    <h3>Vehicle Categories</h3>
+                    <div class="sitemap-links">
+                        <div class="sitemap-link-group">
+                            <h4>SUVs & Crossovers</h4>
+                            <ul>
+                                <li><a href="category.html?type=suv">All SUVs</a></li>
+                                <li><a href="2025-hyundai-palisade-specifications.html">Palisade</a></li>
+                                <li><a href="2025-hyundai-santa-fe.html">Santa Fe</a></li>
+                                <li><a href="hyundai-tucson.html">Tucson</a></li>
+                                <li><a href="hyundai-kona-comparison.html">Kona</a></li>
+                                <li><a href="hyundai-venue.html">Venue</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="sitemap-link-group">
+                            <h4>Sedans</h4>
+                            <ul>
+                                <li><a href="category.html?type=sedan">All Sedans</a></li>
+                                <li><a href="2017-hyundai-sonata.html">Sonata</a></li>
+                                <li><a href="hyundai-elantra.html">Elantra</a></li>
+                                <li><a href="hyundai-accent.html">Accent</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="sitemap-link-group">
+                            <h4>Electric Vehicles</h4>
+                            <ul>
+                                <li><a href="electric.html">All Electric Vehicles</a></li>
+                                <li><a href="hyundai-ioniq5.html">IONIQ 5</a></li>
+                                <li><a href="hyundai-ioniq6.html">IONIQ 6</a></li>
+                                <li><a href="hyundai-kona-electric.html">Kona Electric</a></li>
+                                <li><a href="hyundai-nexo.html">Nexo (Fuel Cell)</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="sitemap-link-group">
+                            <h4>Hatchbacks</h4>
+                            <ul>
+                                <li><a href="hatchback.html">All Hatchbacks</a></li>
+                                <li><a href="hyundai-i30.html">i30</a></li>
+                                <li><a href="hyundai-veloster.html">Veloster</a></li>
+                                <li><a href="hyundai-elantra-gt.html">Elantra GT</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sitemap-category">
+                    <h3>Popular Models</h3>
+                    <div class="sitemap-links">
+                        <div class="sitemap-link-group">
+                            <h4>Current Models</h4>
+                            <ul>
+                                <li><a href="2025-hyundai-palisade-specifications.html">2025 Palisade</a></li>
+                                <li><a href="2025-hyundai-santa-fe.html">2025 Santa Fe</a></li>
+                                <li><a href="hyundai-ioniq5.html">IONIQ 5</a></li>
+                                <li><a href="hyundai-ioniq6.html">IONIQ 6</a></li>
+                                <li><a href="hyundai-tucson.html">Tucson</a></li>
+                                <li><a href="hyundai-kona-comparison.html">Kona</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="sitemap-link-group">
+                            <h4>Previous Models</h4>
+                            <ul>
+                                <li><a href="2024-hyundai-palisade.html">2024 Palisade</a></li>
+                                <li><a href="2023-hyundai-santa-fe.html">2023 Santa Fe</a></li>
+                                <li><a href="2022-hyundai-tucson.html">2022 Tucson</a></li>
+                                <li><a href="2021-hyundai-elantra.html">2021 Elantra</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="sitemap-link-group">
+                            <h4>Performance Models</h4>
+                            <ul>
+                                <li><a href="hyundai-ioniq5-n.html">IONIQ 5 N</a></li>
+                                <li><a href="hyundai-veloster-n.html">Veloster N</a></li>
+                                <li><a href="hyundai-i30-n.html">i30 N</a></li>
+                                <li><a href="hyundai-kona-n.html">Kona N</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sitemap-category">
+                    <h3>Resources & Tools</h3>
+                    <div class="sitemap-links">
+                        <div class="sitemap-link-group">
+                            <h4>Buying Guides</h4>
+                            <ul>
+                                <li><a href="#">New Vehicle Buying Guide</a></li>
+                                <li><a href="#">Used Hyundai Buying Guide</a></li>
+                                <li><a href="#">Financing Options</a></li>
+                                <li><a href="#">Lease vs Buy Calculator</a></li>
+                                <li><a href="#">Insurance Guide</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="sitemap-link-group">
+                            <h4>Owner Resources</h4>
+                            <ul>
+                                <li><a href="#">Maintenance Guides</a></li>
+                                <li><a href="#">Service Schedules</a></li>
+                                <li><a href="#">Warranty Information</a></li>
+                                <li><a href="#">Recall Information</a></li>
+                                <li><a href="#">Owner Reviews</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="sitemap-link-group">
+                            <h4>Comparison Tools</h4>
+                            <ul>
+                                <li><a href="#">Model Comparison Tool</a></li>
+                                <li><a href="#">Trim Level Comparison</a></li>
+                                <li><a href="#">Competitor Comparisons</a></li>
+                                <li><a href="#">Fuel Economy Comparison</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="sitemap-link-group">
+                            <h4>Research Tools</h4>
+                            <ul>
+                                <li><a href="#">Specifications Guide</a></li>
+                                <li><a href="#">Pricing Information</a></li>
+                                <li><a href="#">Feature Comparisons</a></li>
+                                <li><a href="#">Safety Ratings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sitemap-category">
+                    <h3>Company Information</h3>
+                    <div class="sitemap-links">
+                        <div class="sitemap-link-group">
+                            <h4>About HyundaiFans</h4>
+                            <ul>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="#">Our Team</a></li>
+                                <li><a href="#">Editorial Guidelines</a></li>
+                                <li><a href="#">Careers</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="sitemap-link-group">
+                            <h4>Legal Information</h4>
+                            <ul>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms of Condition</a></li>
+                                <li><a href="#">Cookie Policy</a></li>
+                                <li><a href="#">Disclaimer</a></li>
+                                <li><a href="#">Copyright Information</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="sitemap-link-group">
+                            <h4>Community</h4>
+                            <ul>
+                                <li><a href="#">Forums</a></li>
+                                <li><a href="#">Owner Stories</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Newsletter</a></li>
+                                <li><a href="#">Social Media</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <p>Can't find what you're looking for? Use our search function above or <a href="contact.html" style="color: #002856; text-decoration: underline;">contact us</a> for assistance.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <div class="section-header">
+                <h2>Need Help Navigating?</h2>
+                <p>If you're having trouble finding specific information, our team is here to help.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Website Assistance</h3>
+                    <p>Our support team can help you navigate our website and find the information you need about Hyundai vehicles.</p>
+                    <ul class="contact-details">
+                        <li><i>✉️</i> support@hyundaifans.com</li>
+                        <li><i>📞</i> +1 (555) 123-4567</li>
+                        <li><i>📍</i> 123 Automotive Drive, Detroit, MI 48201</li>
+                        <li><i>🕒</i> Mon-Fri: 9AM-6PM EST</li>
+                    </ul>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Request Assistance</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="support-name">Your Name</label>
+                            <input type="text" id="support-name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="support-email">Your Email</label>
+                            <input type="email" id="support-email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="support-topic">What are you looking for?</label>
+                            <select id="support-topic">
+                                <option value="">Select topic</option>
+                                <option value="vehicle-info">Vehicle Information</option>
+                                <option value="specifications">Specifications</option>
+                                <option value="comparison">Model Comparison</option>
+                                <option value="pricing">Pricing Information</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="support-message">Your Message</label>
+                            <textarea id="support-message" rows="5" placeholder="Please describe what you're looking for..."></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Request</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Vehicle Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="category.html?type=suv">SUVs & Crossovers</a></li>
+                        <li><a href="category.html?type=sedan">Sedans</a></li>
+                        <li><a href="electric.html">Electric Vehicles</a></li>
+                        <li><a href="hatchback.html">Hatchbacks</a></li>
+                        <li><a href="performance.html">Performance Models</a></li>
+                        <li><a href="hybrid.html">Hybrid & PHEV</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Popular Models</h3>
+                    <ul class="footer-links">
+                        <li><a href="2025-hyundai-palisade-specifications.html">Palisade</a></li>
+                        <li><a href="2025-hyundai-santa-fe.html">Santa Fe</a></li>
+                        <li><a href="hyundai-ioniq5.html">IONIQ 5</a></li>
+                        <li><a href="hyundai-ioniq6.html">IONIQ 6</a></li>
+                        <li><a href="hyundai-kona-comparison.html">Kona</a></li>
+                        <li><a href="2017-hyundai-sonata.html">Sonata</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Specifications Guide</a></li>
+                        <li><a href="#">Comparison Tools</a></li>
+                        <li><a href="#">Owner Reviews</a></li>
+                        <li><a href="#">Maintenance Guides</a></li>
+                        <li><a href="#">Financing Calculator</a></li>
+                        <li><a href="#">Find a Dealer</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>About HyundaiFans</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Condition</a></li>
+                        <li><a href="#">Site Map</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                © 2025 HyundaiFans | This is an independent fan site not affiliated with Hyundai Motor Company. All specifications are based on manufacturer data and subject to change.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script for interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Search functionality
+            const searchButton = document.querySelector('.search-box button');
+            const searchInput = document.querySelector('.search-box input');
+            
+            if (searchButton && searchInput) {
+                searchButton.addEventListener('click', function() {
+                    if (searchInput.value.trim() !== '') {
+                        alert('Searching for: ' + searchInput.value + '\n\nIn a real implementation, this would perform an actual site search.');
+                        searchInput.value = '';
+                    } else {
+                        alert('Please enter search terms.');
+                    }
+                });
+                
+                searchInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        searchButton.click();
+                    }
+                });
+            }
+            
+            // Form submission handling
+            const supportForm = document.querySelector('.contact-form form');
+            if (supportForm) {
+                supportForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your assistance request. We will help you find the information you need and respond within 24 hours.');
+                    this.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
